@@ -1,3 +1,6 @@
+[![Status of clj-plivo dependencies.](https://jarkeeper.com/gws/clj-plivo/status.svg)]
+(https://jarkeeper.com/gws/clj-plivo)
+
 # clj-plivo
 
 A Clojure library for consuming the
