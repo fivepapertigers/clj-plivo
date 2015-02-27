@@ -5,7 +5,7 @@
 (defrecord Client [auth-id auth-token clj-http-options])
 
 (def base-url-fmt "https://api.plivo.com/v1/%s")
-(def user-agent "clj-plivo/0.1.0-alpha1 (https://github.com/gws/clj-plivo)")
+(def user-agent "clj-plivo/0.1.1 (https://github.com/gws/clj-plivo)")
 
 (defn request
   "Calls the supplied Plivo URL and returns the decoded response body."

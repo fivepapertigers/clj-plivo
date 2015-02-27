@@ -1,4 +1,4 @@
-(defproject gws/clj-plivo "0.1.0"
+(defproject gws/clj-plivo "0.1.1"
   :description "A Clojure implementation of the Plivo API"
   :url "https://gitlab.com/gws/clj-plivo"
   :min-lein-version "2.0.0"
