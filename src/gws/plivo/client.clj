@@ -1,6 +1,6 @@
 (ns gws.plivo.client
-  (:require [clj-http.client :as http-client]
-            [clojure.data.json :as json]))
+  (:require [cheshire.core :as json]
+            [clj-http.client :as http-client]))
 
 (defrecord Client [auth-id auth-token clj-http-options])
 
@@ -19,7 +19,7 @@
                         :url url}
                        (if (= method :get)
                          {:query-params params}
-                         {:body (json/write-str params)})
+                         {:body (json/generate-string params)})
                        (:clj-http-options client))]
      (:body (http-client/request params)))))
 
