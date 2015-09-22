@@ -17,7 +17,7 @@
                         :basic-auth ((juxt :auth-id :auth-token) client)
                         :method method
                         :url url}
-                       (if (= method :get)
+                       (if (some #{method} '(:get :delete))
                          {:query-params params}
                          {:body (json/generate-string params)})
                        (:clj-http-options client))]
