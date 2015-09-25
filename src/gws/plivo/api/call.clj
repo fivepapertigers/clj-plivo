@@ -7,12 +7,6 @@
   (format client/base-url-fmt
           (format "Account/%s/Call/" (:auth-id client))))
 
-(defn make-outbound!
-  "https://www.plivo.com/docs/api/call/#make-an-outbound-call"
-  [client call_options]
-  (let [url (base-url client)]
-    (client/request client :post url call_options)))
-
 (defn create!
   "https://www.plivo.com/docs/api/call/#make-an-outbound-call"
   [client call_options]
@@ -22,9 +16,9 @@
 (defn get
   "https://www.plivo.com/docs/api/call/#get-call-detail-record-of-a-call"
   ([client id]
-    (get client id "/"))
+    (get client id {}))
   ([client id params]
-    (let [url (str (base-url client) id)]
+    (let [url (str (base-url client) id "/")]
       (client/request client :get url params))))
 
 (defn list
@@ -33,7 +27,7 @@
    (list client {}))
   ([client params]
    (let [url (base-url client)]
-     (client/request client :get url params))))
+    (client/request client :get url params))))
 
 
 (defn get-live
@@ -49,7 +43,7 @@
 (defn hangup!
   "https://www.plivo.com/docs/api/call/#hangup-a-specific-call"
   ([client id]
-    (let [url (str (base-url client) id)]
+    (let [url (str (base-url client) id "/")]
       (client/request client :delete url))))
 
 (defn transfer!
