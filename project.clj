@@ -6,4 +6,5 @@
             :url "https://www.apache.org/licenses/LICENSE-2.0"}
   :dependencies [[cheshire "5.4.0"]
                  [clj-http "1.0.1"]
-                 [org.clojure/clojure "1.6.0"]])
+                 [org.clojure/clojure "1.6.0"]
+                 [org.clojure/data.xml "0.0.8"]])
