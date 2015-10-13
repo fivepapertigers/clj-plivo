@@ -1,4 +1,4 @@
-(defproject org.clojars.fivepapertigers/clj-plivo "0.1.2"
+(defproject org.clojars.fivepapertigers/clj-plivo "0.1.3"
   :description "A Clojure implementation of the Plivo API"
   :url "https://gitlab.com/fivepapertigers/clj-plivo"
   :min-lein-version "2.0.0"
